@@ -11,20 +11,23 @@ import PageNotFound from './Pages/404Page'
 import Login from './Pages/Login'
 import Register from './Pages/Register';
 import Loader from './components/Loader';
+import { PageTheme } from './contexts/ThemeContext';
+import { useContext } from 'react';
+import Countries from './Pages/Countries';
+import ConDetailPage from './Pages/ConDetailPage';
+
 
 
 
 function App() {
-  // const [count, setCount] = useState(0)
 
-    
+  const {theme} = useContext(PageTheme)
 
   // always write your javascript before this return
   return (
-    <>
-    {/* <Home/>
-    <About/>
-    <Products/> */}
+
+    <div className={`bg-${theme} ${theme === "dark" ? "text-light" : "text-dark"}`}>
+   
     
     {/* Routing pages */}
     <BrowserRouter>
@@ -40,9 +43,11 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/*' element={<PageNotFound/>}/>
         <Route path='/loader' element={<Loader/>}/>
+        <Route path='/countries' element={<Countries/>}/>
+        <Route path='/condetail' element={<ConDetailPage/>}/>
       </Routes>
     </BrowserRouter>
-    </>
+    </div>
 
   )
 }

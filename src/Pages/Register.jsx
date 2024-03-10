@@ -101,7 +101,7 @@ console.log(showPassword);
             </div>
 
             <button
-          className="btn  btn-primary my-3 p-3 w-100"
+          className="btn  btn-danger my-3 p-3 w-100"
           onClick={handleSubmit}
           disabled={loading}
         >

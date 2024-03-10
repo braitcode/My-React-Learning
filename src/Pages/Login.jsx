@@ -19,7 +19,7 @@ const Login = () => {
     // api url
     const url = "https://blogg-api-v1.onrender.com/login";
 
-    // validation
+    // form validation
     if (!email || !password) {
       console.log("Enter all fields");
       return toast.error("Enter all fields");

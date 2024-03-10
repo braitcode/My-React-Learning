@@ -65,6 +65,7 @@ const FetchData = () => {
                     height: "400px",
                     backgroundColor: "#eee",
                     padding: "5px",
+                    color: "black"
                   }}
                   key={blog._id}
                 >

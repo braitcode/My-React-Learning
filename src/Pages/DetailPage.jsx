@@ -17,7 +17,7 @@ const DetailPage = () => {
         <h1>Detail Page</h1>
         {/* <ProductCard/> */}
         <div className="">
-            <h3>product {id} clicked</h3>
+            {/* <h3>product {id} clicked</h3> */}
             {/* <ProductCard product={bright}/> */}
             <DetailCard product={bright}/>
         </div>
